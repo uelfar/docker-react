@@ -1,7 +1,7 @@
 sudo: required
 services:
         - docker
-before_install
+before_install:
         - docker build -t mytest -f Dockerfile.dev .   
 script
         - docker run mytest npm run test -- --coverage
